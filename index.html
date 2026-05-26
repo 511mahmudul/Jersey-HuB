@@ -291,14 +291,13 @@ footer p{font-size:12px;color:rgba(255,255,255,.45);text-align:center;}
 </head>
 <body>
 
-<!-- WA FLOAT -->
 <a href="https://wa.me/8801518737032" target="_blank" class="wa-btn" title="WhatsApp এ অর্ডার করুন">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
-<!-- NAVBAR -->
 <nav>
-  <img class="nav-logo" src="Jersey HuB logo.jpg">
+  <img class="nav-logo" src="Jersey HuB logo.jpg.jpg" alt="Jersey HuB Logo">
+  <div class="nav-links">
     <a href="#fabrics">ফেব্রিক</a>
     <a href="#pricing">মূল্য তালিকা</a>
     <a href="#sizechart">সাইজ চার্ট</a>
@@ -310,7 +309,6 @@ footer p{font-size:12px;color:rgba(255,255,255,.45);text-align:center;}
   </a>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-content">
@@ -336,8 +334,6 @@ footer p{font-size:12px;color:rgba(255,255,255,.45);text-align:center;}
   </div>
 </section>
 
-
-<!-- DESIGN CAROUSEL -->
 <section class="designs" id="designs">
   <div class="sec-head">
     <span class="sec-label">আমাদের ডিজাইন</span>
@@ -407,23 +403,11 @@ footer p{font-size:12px;color:rgba(255,255,255,.45);text-align:center;}
 </style>
 
 <script>
-const designImages =  
-  "demo11.jpg",
-  "demo2.jpg",
-  "demo14.jpg",
-  "demo12.jpg",
-  "demo3.jpg",
-  "demo5.jpg",
-  "demo6.jpg",
-  "demo7.jpg",
-  "demo1.jpg",
-  "demo4.jpg",
-  "demo8.jpg",
-  "demo9.jpg",
-  "demo10.jpg",
-  "demo13.jpg",
-  "demo15.jpg";
-
+const designImages = [ 
+  "demo11.jpg", "demo2.jpg", "demo14.jpg", "demo12.jpg", "demo3.jpg",
+  "demo5.jpg", "demo6.jpg", "demo7.jpg", "demo1.jpg", "demo4.jpg",
+  "demo8.jpg", "demo9.jpg", "demo10.jpg", "demo13.jpg", "demo15.jpg"
+];
 
 let carIndex = 0;
 let carAuto;
@@ -455,7 +439,9 @@ function carBuild() {
 
 function carGoTo(idx) {
   const track = document.getElementById('carTrack');
+  if (!track) return;
   const slides = track.querySelectorAll('.car-slide');
+  if (slides.length === 0) return;
   const max = slides.length - perView();
   carIndex = Math.max(0, Math.min(idx, max));
   
@@ -485,15 +471,14 @@ window.addEventListener('load', () => { carBuild(); startAuto(); });
 window.addEventListener('resize', () => carBuild());
 </script>
 
-<!-- WHY -->
 <section class="why" id="why">
   <div class="sec-head">
     <span class="sec-label">কেন Jersey HuB</span>
     <h2 class="sec-title">আরাম, গুনগতমান ও নিজস্বতা —<br><span class="hl">তিনটি একসাথে পাওয়াই Jersey HuB এর পার্থক্য।</span></h2>
-    <p class="sec-sub">প্রতিটি জার্সি তৈরি হয় আপনার চাহিদা ও আরামের কথা মাথায় রেখে।</p>
+    <p class="sec-sub">প্রতিটি জার্সি তৈরি হয় আপনার চাহিদা ও আরামের কথা মাথায় রেখে。</p>
   </div>
   <div class="feats">
-    <div class="feat"><div class="feat-icon">🎨</div><h3>সম্পূর্ণ কাস্টম ডিজাইন</h3><p>নাম, নম্বর ও লোগো — সম্পূর্ণ বিনামূল্যে। আপনার পছন্দমতো যেকোনো রঙ ও ডিজাইন অনুযায়ী।</p></div>
+    <div class="feat"><div class="feat-icon">🎨</div><h3>সম্পূর্ণ কাস্টম ডিজাইন</h3><p>নাম, নম্বর ও লোগো — সম্পূর্ণ বিনামূল্যে। আপনার পছন্দমতো যেকোনো রঙ ও ডিজাইন অনুযায়ী।</p></div>
     <div class="feat"><div class="feat-icon">🖨️</div><h3>Premium Sublimation Print</h3><p>ওয়াশেও রঙ বিবর্ণ হয় না। দীর্ঘস্থায়ী, উজ্জ্বল প্রিন্ট — professional মানের।</p></div>
     <div class="feat"><div class="feat-icon">✂️</div><h3>Garments Quality সেলাই</h3><p>5 Ply High Tension Cuff-Collar — আকার ধরে রাখে, টেকসই ও পরতে আরামদায়ক।</p></div>
     <div class="feat"><div class="feat-icon">📏</div><h3>সব সাইজে তৈরি</h3><p>XS থেকে 4XL এবং বাচ্চাদের সাইজও available — সবার জন্য perfect fit।</p></div>
@@ -502,7 +487,6 @@ window.addEventListener('resize', () => carBuild());
   </div>
 </section>
 
-<!-- FABRICS -->
 <section class="fabrics" id="fabrics">
   <div class="sec-head">
     <span class="sec-label">আমাদের কাপড়</span>
@@ -510,42 +494,37 @@ window.addEventListener('resize', () => carBuild());
     <p class="sec-sub">৩টি মানের স্তরে — আপনার বাজেট ও পছন্দ অনুযায়ী সেরা fabric বেছে নিন।</p>
   </div>
 
-  <!-- Tier 1 -->
   <div class="fab-group">
     <span class="fab-tier-label tier-p">Tier 1 — Premium Quality</span>
     <div class="fab-grid">
       <div class="fab-card"><img class="fab-img" src="china pp-180.jpeg" alt="China PP-180"><div class="fab-name">China PP-180</div></div>
-     <div class="fab-card"><img class="fab-img" src="Lorex fabric.jpeg" alt="Lorex"><div class="fab-name">Lorex</div></div>
+      <div class="fab-card"><img class="fab-img" src="Lorex fabric.jpeg" alt="Lorex"><div class="fab-name">Lorex</div></div>
       <div class="fab-card"><img class="fab-img" src="Suger mesh.jpeg" alt="Suger Mesh"><div class="fab-name">Suger Mesh</div></div>
-      <div class="fab-card"><img class="fab-img" src="china mesh.jpeg"China mesh"><div class="fab-name">China mesh</div></div>
+      <div class="fab-card"><img class="fab-img" src="china mesh.jpeg.jpeg" alt="China mesh"><div class="fab-name">China mesh</div></div>
     </div>
   </div>
 
-  <!-- Tier 2 -->
   <div class="fab-group">
     <span class="fab-tier-label tier-sp">Tier 2 — Super Premium Quality</span>
     <div class="fab-grid">
       <div class="fab-card"><img class="fab-img" src="Boxmeshfabric.jpeg" alt="Birdseye / Box Mesh"><div class="fab-name">Birdseye / Box Mesh</div></div>
       <div class="fab-card"><img class="fab-img" src="honeycomb.jpeg" alt="Honeycomb"><div class="fab-name">Honeycomb</div></div>
-      <div class="fab-card"><img class="fab-img" src="thai mesh.jpeg" alt="Thai Mash"><div class="fab-name">Thai Mash</div></div>
-      
+      <div class="fab-card"><img class="fab-img" src="thai mesh.jpeg.jpeg" alt="Thai Mash"><div class="fab-name">Thai Mash</div></div>
     </div>
   </div>
 
-  <!-- Tier 3 -->
   <div class="fab-group">
     <span class="fab-tier-label tier-up">Tier 3 — Ultra Super Premium · Jacquard Collection</span>
     <div class="fab-grid">
-      <div class="fab-card"><img class="fab-img" src="leaf jaqquard.jpeg" alt="Leaf Jacquard"><div class="fab-name">Leaf Jacquard</div></div>
+      <div class="fab-card"><img class="fab-img" src="leaf jaqquard.jpeg.jpeg" alt="Leaf Jacquard"><div class="fab-name">Leaf Jacquard</div></div>
       <div class="fab-card"><img class="fab-img" src="leaf jaquard2.jpg" alt="Leaf Jaquard"><div class="fab-name">Leaf Jaquard</div></div>
       <div class="fab-card"><img class="fab-img" src="honeycomb jacquard.jpg" alt="Honeycomb Jacquard"><div class="fab-name">Honeycomb Jacquard</div></div>
       <div class="fab-card"><img class="fab-img" src="Brush Jacquard.jpg" alt="Brush Jacquard"><div class="fab-name">Brush Jacquard</div></div>
-      <div class="fab-card"><img class="fab-img" src="TIGER Jacquard.jpg" alt="Tiger Jacquard"><div class="fab-name">TIGER Jacquard</div></div>
+      <div class="fab-card"><img class="fab-img" src="TIGER Jacquard.jpg.jpg" alt="Tiger Jacquard"><div class="fab-name">TIGER Jacquard</div></div>
     </div>
   </div>
 </section>
 
-<!-- PRICING -->
 <section class="pricing" id="pricing">
   <div class="sec-head">
     <span class="sec-label">মূল্য তালিকা</span>
@@ -562,7 +541,7 @@ window.addEventListener('resize', () => carBuild());
       <div class="pr"><span class="type">গোলগলা হাফ হাতা</span><span class="amt">৳৩০০</span></div>
       <div class="pr"><span class="type">গোলগলা ফুল হাতা</span><span class="amt">৳৩৩০</span></div>
       <div class="pr"><span class="type">কলার হাফ হাতা</span><span class="amt">৳৩৩০</span></div>
-      <div class="pr"><span class="type">কলার ফুল হাতা</span><span class="amt">৳৩৫০</span></div>
+      <div class="pr"><span class="type">কলার ফুল হাতা</span><span class="amt">৳৩NT০</span></div>
     </div>
 
     <div class="pc">
@@ -571,8 +550,8 @@ window.addEventListener('resize', () => carBuild());
       <p class="pc-fabrics">Mesh • Chinigura</p>
       <hr>
       <div class="pr"><span class="type">গোলগলা হাফ হাতা</span><span class="amt">৳৩১০</span></div>
-      <div class="pr"><span class="type">গোলগলা ফুল হাতা</span><span class="amt">৳৩৪০</span></div>
-      <div class="pr"><span class="type">কলার হাফ হাতা</span><span class="amt">৳৩৪০</span></div>
+      <div class="pr"><span class="type">গোলগলা ফুল হাতা</span><span class="amt">৳৩ND০</span></div>
+      <div class="pr"><span class="type">কলার হাফ হাতা</span><span class="amt">৳৩ND০</span></div>
       <div class="pr"><span class="type">কলার ফুল হাতা</span><span class="amt">৳৩৭০</span></div>
     </div>
 
@@ -592,7 +571,7 @@ window.addEventListener('resize', () => carBuild());
       <h3>Lurex Fabric</h3>
       <p class="pc-fabrics">Lurex</p>
       <hr>
-      <div class="pr"><span class="type">গোলগলা হাফ হাতা</span><span class="amt">৳৩৪০</span></div>
+      <div class="pr"><span class="type">গোলগলা হাফ হাতা</span><span class="amt">৳৩ND০</span></div>
       <div class="pr"><span class="type">গোলগলা ফুল হাতা</span><span class="amt">৳৩৭০</span></div>
       <div class="pr"><span class="type">কলার হাফ হাতা</span><span class="amt">৳৩৬০</span></div>
       <div class="pr"><span class="type">কলার ফুল হাতা</span><span class="amt">৳৩৯০</span></div>
@@ -605,7 +584,7 @@ window.addEventListener('resize', () => carBuild());
       <hr>
       <div class="pr"><span class="type">গোলগলা হাফ হাতা</span><span class="amt">৳৪২০</span></div>
       <div class="pr"><span class="type">গোলগলা ফুল হাতা</span><span class="amt">৳৪৫০</span></div>
-      <div class="pr"><span class="type">কলার হাফ হাতা</span><span class="amt">৳৪৪০</span></div>
+      <div class="pr"><span class="type">কলার হাফ হাতা</span><span class="amt">৳৪ND০</span></div>
       <div class="pr"><span class="type">কলার ফুল হাতা</span><span class="amt">৳৪৭০</span></div>
     </div>
 
@@ -645,95 +624,57 @@ window.addEventListener('resize', () => carBuild());
   </div>
 </section>
 
-<!-- INFO STRIP -->
 <div class="infostrip">
   <div class="info-grid">
     <div class="info-item"><div class="ico">📦</div><h4>সর্বনিম্ন ১০ পিস</h4><p>ছোট অর্ডারেও পূর্ণ সেবা</p></div>
     <div class="info-item"><div class="ico">🎨</div><h4>Custom Sublimation</h4><p>সম্পূর্ণ কাস্টম প্রিন্টিং</p></div>
     <div class="info-item"><div class="ico">🚚</div><h4>৩–৫ কর্মদিবস</h4><p>দ্রুত ও নিরাপদ ডেলিভারি</p></div>
     <div class="info-item"><div class="ico">✅</div><h4>নাম ও নম্বর ফ্রি</h4><p>লোগোও বিনামূল্যে</p></div>
-    <div class="info-item"><div class="ico">✂️</div><h4>Garments Stitching</h4><p>5 Ply High Tension Cuff</p></div>
   </div>
 </div>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="contact-wrap">
-    <div class="contact-left">
-      <span class="sec-label">যোগাযোগ করুন</span>
-      <h2>অর্ডার করতে<br>এখনই যোগাযোগ করুন</h2>
-      <p>WhatsApp বা Facebook — যেকোনো মাধ্যমে আমাদের সাথে যোগাযোগ করুন। Design confirm এর পর মাত্র ৩–৫ কর্মদিবসে আপনার জার্সি পৌঁছে যাবে।</p>
-      <a href="https://wa.me/8801518737032" target="_blank" class="cta-main">📲 এখনই অর্ডার করুন</a>
-    </div>
-    <div class="c-cards">
-      <a href="https://wa.me/8801518737032" target="_blank" class="c-card">
-        <span class="ci">💬</span>
-        <div class="ct"><h4>WhatsApp</h4><p>01518-737032 — সরাসরি মেসেজ করুন</p></div>
-        <span class="arr">→</span>
-      </a>
-      <a href="https://www.facebook.com/JerseyHuB511" target="_blank" class="c-card">
-        <span class="ci">📘</span>
-        <div class="ct"><h4>Facebook Page</h4><p>Jersey HuB — আমাদের Follow করুন</p></div>
-        <span class="arr">→</span>
-      </a>
-      <div class="c-card" style="cursor:default;">
-        <span class="ci">🕐</span>
-        <div class="ct"><h4>ডেলিভারি সময়</h4><p>Print file confirm এর পর ৩–৫ কর্মদিবস</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SIZE CHART -->
 <section class="sizechart" id="sizechart">
   <div class="sec-head">
-    <span class="sec-label">সাইজ গাইড</span>
-    <h2 class="sec-title">Size <span class="hl">Chart</span></h2>
-    <p class="sec-sub">অর্ডার করার আগে সাইজ মিলিয়ে নিন — সঠিক fit এর জন্য।</p>
+    <span class="sec-label">মাপের তালিকা</span>
+    <h2 class="sec-title">Jersey HuB <span class="hl">Official Size Chart</span></h2>
+    <p class="sec-sub">অর্ডার করার আগে আপনার সঠিক সাইজটি মিলিয়ে নিন।</p>
   </div>
   <div class="size-wrap">
     <div class="size-block">
-      <h3>👨 Men's Size Chart</h3>
+      <h3>👕 Standard Size (Adult)</h3>
       <table>
-        <thead><tr><th>Size</th><th>Length</th><th>Chest</th></tr></thead>
+        <thead>
+          <tr>
+            <th>Size</th>
+            <th>Chest (ইঞ্চি)</th>
+            <th>Length (ইঞ্চি)</th>
+          </tr>
+        </thead>
         <tbody>
-          <tr><td>XS</td><td>25"</td><td>34"</td></tr>
-          <tr><td>S</td><td>26"</td><td>36"</td></tr>
-          <tr><td>M</td><td>27"</td><td>38"</td></tr>
-          <tr><td>L</td><td>28"</td><td>40"</td></tr>
-          <tr><td>XL</td><td>29"</td><td>42"</td></tr>
-          <tr><td>XXL</td><td>30"</td><td>44"</td></tr>
-          <tr><td>XXXL</td><td>31"</td><td>46"</td></tr>
+          <tr><td>M</td><td>38</td><td>27</td></tr>
+          <tr><td>L</td><td>40</td><td>28</td></tr>
+          <tr><td>XL</td><td>42</td><td>29</td></tr>
+          <tr><td>XXL</td><td>44</td><td>30</td></tr>
         </tbody>
       </table>
-      <p class="size-note">* সাইজ নিয়ে সন্দেহ থাকলে WhatsApp এ জানান।</p>
-    </div>
-    <div class="size-block">
-      <h3>👦 Kids Size Chart</h3>
-      <table>
-        <thead><tr><th>Age</th><th>Length</th><th>Chest</th></tr></thead>
-        <tbody>
-          <tr><td>3–4 Years</td><td>18"</td><td>26"</td></tr>
-          <tr><td>5–6 Years</td><td>19"</td><td>28"</td></tr>
-          <tr><td>7–8 Years</td><td>20"</td><td>30"</td></tr>
-          <tr><td>9–10 Years</td><td>22"</td><td>32"</td></tr>
-          <tr><td>11–12 Years</td><td>24"</td><td>34"</td></tr>
-        </tbody>
-      </table>
-      <p class="size-note">* Baby ও Plus Size এর জন্য আলাদাভাবে যোগাযোগ করুন।</p>
+      <p class="size-note">* সাইজ সামান্য কম-বেশি (0.5 ইঞ্চি) হতে পারে।</p>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <img src="Jersey HuB logo.jpg" alt="Jersey HuB">
-  <p>© 2026 Jersey HuB. সকল অধিকার সংরক্ষিত।<br>Customise Jersey • Premium Quality • Bangladesh</p>
-  <div class="foot-links">
-    <a href="https://wa.me/8801518737032" target="_blank">WhatsApp</a>
-    <a href="https://www.facebook.com/JerseyHuB511" target="_blank">Facebook</a>
-    <a href="#sizechart">Size Chart</a>
+<section class="contact" id="contact">
+  <div class="contact-wrap">
+    <div class="contact-left">
+      <h2>আমাদের সাথে যোগাযোগ করুন</h2>
+      <p>আপনার ক্লাবের জার্সি বা যেকোনো কাস্টম ডিজাইনের জার্সির জন্য আজই যোগাযোগ করুন।</p>
+      <a href="https://wa.me/8801518737032" target="_blank" class="cta-main">সরাসরি WhatsApp-এ কথা বলুন</a>
+    </div>
   </div>
+</section>
+
+<footer>
+  <img src="Jersey HuB logo.jpg.jpg" alt="Jersey HuB Logo">
+  <p>&copy; 2026 Jersey HuB. All Rights Reserved.</p>
 </footer>
 
 </body>
