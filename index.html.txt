@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jersey HuB — Premium Customise Jersey Bangladesh</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Baloo+Da+2:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0a1f5c;
+  --blue:#1038a8;
+  --bluelight:#2655d4;
+  --gold:#d4940a;
+  --gold2:#f5b731;
+  --white:#fff;
+  --offwhite:#f4f6fb;
+  --dark:#0d1226;
+  --text:#111827;
+  --muted:#5a6480;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans Bengali','Baloo Da 2',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+
+/* ── NAVBAR ── */
+nav{
+  position:fixed;top:0;width:100%;z-index:200;
+  background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);
+  padding:0 5%;display:flex;align-items:center;justify-content:space-between;
+  height:68px;border-bottom:2px solid rgba(10,31,92,0.08);
+  box-shadow:0 2px 20px rgba(10,31,92,0.07);
+}
+.nav-logo{height:46px;width:auto;object-fit:contain;}
+.nav-links{display:flex;gap:32px;}
+.nav-links a{
+  color:var(--navy);text-decoration:none;
+  font-family:'Rajdhani',sans-serif;font-weight:600;font-size:15px;
+  letter-spacing:0.4px;transition:color .2s;position:relative;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;
+  background:var(--gold);transform:scaleX(0);transition:transform .2s;
+}
+.nav-links a:hover{color:var(--blue);}
+.nav-links a:hover::after{transform:scaleX(1);}
+.nav-cta{
+  background:linear-gradient(135deg,#1a8a40,#25d366);
+  color:#fff;padding:10px 24px;border-radius:8px;
+  font-family:'Rajdhani',sans-serif;font-weight:700;font-size:15px;
+  text-decoration:none;transition:all .25s;
+  box-shadow:0 4px 16px rgba(37,211,102,.35);display:flex;align-items:center;gap:6px;
+}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,.45);}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;padding:88px 5% 60px;
+  background:linear-gradient(145deg,var(--dark) 0%,var(--navy) 55%,#1a3070 100%);
+  display:flex;align-items:center;position:relative;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 60% at 70% 50%, rgba(26,48,112,.6) 0%, transparent 70%),
+             url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M0 0h40v40H0zm40 40h40v40H40z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-content{position:relative;z-index:1;max-width:620px;}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(212,148,10,.15);border:1px solid rgba(212,148,10,.4);
+  color:var(--gold2);padding:7px 18px;border-radius:50px;
+  font-size:12px;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;margin-bottom:28px;
+}
+.hero h1{
+  font-family:'Rajdhani',sans-serif;
+  font-size:clamp(36px,5.5vw,66px);font-weight:700;
+  color:#fff;line-height:1.1;margin-bottom:20px;
+}
+.hero h1 .hl{
+  background:linear-gradient(90deg,var(--gold2),#ffdd88);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hero-sub{font-size:16px;color:rgba(255,255,255,.75);line-height:1.75;margin-bottom:38px;max-width:520px;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-wa{
+  display:inline-flex;align-items:center;gap:9px;
+  background:linear-gradient(135deg,#1a8a40,#25d366);
+  color:#fff;padding:14px 28px;border-radius:9px;
+  font-family:'Rajdhani',sans-serif;font-weight:700;font-size:16px;
+  text-decoration:none;transition:all .25s;
+  box-shadow:0 5px 22px rgba(37,211,102,.4);
+}
+.btn-wa:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(37,211,102,.5);}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:9px;
+  background:rgba(255,255,255,.1);color:#fff;
+  padding:14px 28px;border-radius:9px;
+  font-family:'Rajdhani',sans-serif;font-weight:700;font-size:16px;
+  text-decoration:none;border:1.5px solid rgba(255,255,255,.3);transition:all .25s;
+}
+.btn-ghost:hover{background:rgba(255,255,255,.2);transform:translateY(-3px);}
+.hero-pills{
+  display:flex;flex-wrap:wrap;gap:12px;margin-top:44px;
+  padding-top:32px;border-top:1px solid rgba(255,255,255,.12);
+}
+.pill{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);
+  color:rgba(255,255,255,.85);padding:8px 18px;border-radius:50px;
+  font-size:13px;font-weight:600;
+}
+.pill span{color:var(--gold2);}
+
+/* ── SECTION BASE ── */
+section{padding:80px 5%;}
+.sec-label{
+  font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;
+  letter-spacing:3px;text-transform:uppercase;color:var(--bluelight);
+  display:block;margin-bottom:8px;
+}
+.sec-title{
+  font-family:'Rajdhani',sans-serif;font-size:clamp(26px,3.8vw,42px);
+  font-weight:700;color:var(--text);margin-bottom:10px;line-height:1.2;
+}
+.sec-title .hl{color:var(--blue);}
+.sec-sub{color:var(--muted);font-size:15px;line-height:1.75;max-width:500px;}
+.sec-head{margin-bottom:50px;}
+
+/* ── WHY ── */
+.why{background:var(--offwhite);}
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;}
+.feat{
+  background:#fff;border-radius:14px;padding:28px 24px;
+  border:1px solid #e2e8f5;transition:all .3s;position:relative;overflow:hidden;
+}
+.feat::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--blue),var(--bluelight));
+  transform:scaleX(0);transform-origin:left;transition:transform .35s;
+}
+.feat:hover{transform:translateY(-5px);box-shadow:0 14px 40px rgba(10,31,92,.11);}
+.feat:hover::after{transform:scaleX(1);}
+.feat-icon{font-size:34px;margin-bottom:14px;}
+.feat h3{font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:7px;}
+.feat p{font-size:14px;color:var(--muted);line-height:1.65;}
+
+/* ── FABRICS ── */
+.fabrics{background:#fff;}
+.fab-tier-label{
+  font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;
+  display:inline-block;padding:4px 14px;border-radius:50px;
+  margin-bottom:20px;
+}
+.tier-p{background:#e8f0ff;color:var(--blue);}
+.tier-sp{background:#fff3e0;color:#b36200;}
+.tier-up{background:#e8fff0;color:#1a7a3a;}
+.fab-group{margin-bottom:48px;}
+.fab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;}
+.fab-card{
+  border-radius:12px;overflow:hidden;border:1px solid #e2e8f0;
+  transition:all .3s;background:#fff;
+}
+.fab-card:hover{transform:translateY(-5px);box-shadow:0 14px 36px rgba(10,31,92,.13);}
+.fab-img{width:100%;height:185px;object-fit:cover;display:block;transition:transform .4s;}
+.fab-card:hover .fab-img{transform:scale(1.06);}
+.fab-name{
+  padding:14px 16px;font-family:'Rajdhani',sans-serif;
+  font-size:17px;font-weight:700;color:var(--navy);
+  border-top:3px solid var(--bluelight);
+}
+
+/* ── PRICING ── */
+.pricing{background:var(--navy);}
+.pricing .sec-label{color:var(--gold2);}
+.pricing .sec-title{color:#fff;}
+.pricing .sec-title .hl{color:var(--gold2);}
+.pricing .sec-sub{color:rgba(255,255,255,.6);}
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px;}
+.pc{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
+  border-radius:16px;padding:30px 26px;transition:all .3s;
+}
+.pc.pop{
+  background:rgba(212,148,10,.1);border-color:rgba(212,148,10,.5);
+  position:relative;
+}
+.pc.pop::before{
+  content:'⭐ সবচেয়ে জনপ্রিয়';
+  position:absolute;top:-14px;left:50%;transform:translateX(-50%);
+  background:var(--gold);color:#fff;padding:4px 20px;border-radius:50px;
+  font-size:12px;font-weight:700;white-space:nowrap;
+  font-family:'Rajdhani',sans-serif;letter-spacing:.5px;
+}
+.pc:hover{background:rgba(255,255,255,.09);transform:translateY(-4px);}
+.pc-tier{font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold2);margin-bottom:6px;}
+.pc h3{font-family:'Rajdhani',sans-serif;font-size:21px;font-weight:700;color:#fff;margin-bottom:4px;}
+.pc-fabrics{font-size:12px;color:rgba(255,255,255,.45);margin-bottom:18px;}
+.pc hr{border:none;border-top:1px solid rgba(255,255,255,.1);margin-bottom:18px;}
+.pr{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.06);}
+.pr:last-child{border-bottom:none;}
+.pr .type{font-size:14px;color:rgba(255,255,255,.78);}
+.pr .amt{font-family:'Rajdhani',sans-serif;font-size:17px;font-weight:700;color:#fff;}
+
+/* ── INFO STRIP ── */
+.infostrip{background:var(--blue);padding:44px 5%;}
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;}
+.info-item{text-align:center;color:#fff;}
+.info-item .ico{font-size:26px;margin-bottom:9px;}
+.info-item h4{font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;margin-bottom:3px;}
+.info-item p{font-size:13px;color:rgba(255,255,255,.65);}
+
+/* ── CONTACT ── */
+.contact{background:var(--offwhite);}
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+.contact-left h2{font-family:'Rajdhani',sans-serif;font-size:clamp(26px,3.5vw,38px);font-weight:700;color:var(--navy);margin-bottom:14px;}
+.contact-left p{font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:28px;}
+.cta-main{
+  display:inline-flex;align-items:center;gap:9px;
+  background:linear-gradient(135deg,#1a8a40,#25d366);
+  color:#fff;padding:14px 30px;border-radius:9px;
+  font-family:'Rajdhani',sans-serif;font-weight:700;font-size:16px;
+  text-decoration:none;transition:all .25s;
+  box-shadow:0 5px 20px rgba(37,211,102,.35);
+}
+.cta-main:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(37,211,102,.45);}
+.c-cards{display:flex;flex-direction:column;gap:14px;}
+.c-card{
+  display:flex;align-items:center;gap:18px;
+  background:#fff;border-radius:12px;padding:20px 22px;
+  border:1px solid #e2e8f5;text-decoration:none;color:inherit;transition:all .3s;
+}
+.c-card:hover{transform:translateX(6px);box-shadow:0 8px 28px rgba(10,31,92,.1);border-color:var(--bluelight);}
+.c-card .ci{font-size:34px;flex-shrink:0;}
+.c-card .ct h4{font-family:'Rajdhani',sans-serif;font-size:17px;font-weight:700;color:var(--navy);}
+.c-card .ct p{font-size:13px;color:var(--muted);margin-top:2px;}
+.c-card .arr{margin-left:auto;color:var(--bluelight);font-size:18px;}
+
+/* ── SIZE CHART ── */
+.sizechart{background:#fff;}
+.size-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+.size-block h3{
+  font-family:'Rajdhani',sans-serif;font-size:20px;font-weight:700;
+  color:var(--navy);margin-bottom:16px;display:flex;align-items:center;gap:8px;
+}
+table{width:100%;border-collapse:collapse;font-size:14px;}
+thead tr{background:var(--navy);color:#fff;}
+thead th{padding:11px 14px;text-align:left;font-family:'Rajdhani',sans-serif;font-weight:600;font-size:13px;letter-spacing:.5px;}
+tbody tr{border-bottom:1px solid #e8edf5;transition:background .15s;}
+tbody tr:hover{background:var(--offwhite);}
+tbody td{padding:10px 14px;color:var(--text);font-weight:500;}
+tbody tr:last-child{border-bottom:none;}
+.size-note{margin-top:12px;font-size:12px;color:var(--muted);font-style:italic;}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--dark);padding:32px 5%;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;
+}
+footer img{height:38px;}
+footer p{font-size:12px;color:rgba(255,255,255,.45);text-align:center;}
+.foot-links{display:flex;gap:20px;}
+.foot-links a{color:rgba(255,255,255,.45);font-size:13px;text-decoration:none;transition:color .2s;}
+.foot-links a:hover{color:var(--gold2);}
+
+/* ── WA FLOAT ── */
+.wa-btn{
+  position:fixed;bottom:26px;right:26px;z-index:999;
+  background:#25d366;width:56px;height:56px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;box-shadow:0 6px 22px rgba(37,211,102,.5);
+  animation:wapulse 2.4s infinite;
+}
+@keyframes wapulse{0%,100%{box-shadow:0 6px 22px rgba(37,211,102,.5);}50%{box-shadow:0 6px 38px rgba(37,211,102,.75);}}
+.wa-btn svg{width:26px;height:26px;fill:#fff;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .contact-wrap{grid-template-columns:1fr;}
+  .size-wrap{grid-template-columns:1fr;}
+  footer{flex-direction:column;text-align:center;}
+}
+@media(max-width:480px){
+  section{padding:60px 4%;}
+  .hero{padding:80px 4% 50px;}
+  .hero-btns{flex-direction:column;}
+  .hero-btns a{text-align:center;justify-content:center;}
+  .price-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- WA FLOAT -->
+<a href="https://wa.me/8801518737032" target="_blank" class="wa-btn" title="WhatsApp এ অর্ডার করুন">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- NAVBAR -->
+<nav>
+  <img class="nav-logo" src="Jersey HuB logo.jpg">
+    <a href="#fabrics">ফেব্রিক</a>
+    <a href="#pricing">মূল্য তালিকা</a>
+    <a href="#sizechart">সাইজ চার্ট</a>
+    <a href="#contact">যোগাযোগ</a>
+  </div>
+  <a href="https://wa.me/8801518737032" target="_blank" class="nav-cta">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    অর্ডার করুন
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">✦ Premium Customise Jersey — Bangladesh</div>
+    <h1>সৃজনশীলতা, দক্ষতা এবং সততার নিখুঁত সমন্বয়<br><span class="hl">Jersey HuB বিশ্বাস করে গুণগত মানে, যা আপনাকে দেবে অনন্য এক অভিজ্ঞতা। —</span><br>Crafting the perfect fit you love to wear. Jersey HuB – Quality is Our Signature.</h1>
+    <p class="hero-sub">
+      নিজের নাম, নম্বর ও লোগোসহ — premium fabric এ তৈরি করুন সম্পূর্ণ কাস্টম জার্সি।
+      পরতে আরামদায়ক, দেখতে unique, আর দামে একদম হাতের নাগালে।
+    </p>
+    <div class="hero-btns">
+      <a href="https://wa.me/8801518737032" target="_blank" class="btn-wa">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp এ অর্ডার করুন
+      </a>
+      <a href="#pricing" class="btn-ghost">💰 মূল্য তালিকা দেখুন</a>
+    </div>
+    <div class="hero-pills">
+      <span class="pill"><span>৳৩০০</span> থেকে শুরু</span>
+      <span class="pill">সর্বনিম্ন <span>১০ পিস</span></span>
+      <span class="pill"><span>৩–৫</span> কর্মদিবসে ডেলিভারি</span>
+      <span class="pill">নাম ও নম্বর <span>ফ্রি</span></span>
+    </div>
+  </div>
+</section>
+
+
+<!-- DESIGN CAROUSEL -->
+<section class="designs" id="designs">
+  <div class="sec-head">
+    <span class="sec-label">আমাদের ডিজাইন</span>
+    <h2 class="sec-title">Design <span class="hl">Collection</span></h2>
+    <p class="sec-sub">এগুলো আমাদের কিছু নমুনা ডিজাইন। আরও বেশি ডিজাইন দেখতে এবং নিজের পছন্দমতো কাস্টম ডিজাইন করতে আমাদের সাথে যোগাযোগ করুন।</p>
+  </div>
+
+  <div class="carousel-wrap">
+    <button class="car-btn car-prev" onclick="carMove(-1)">&#8249;</button>
+    <div class="car-track-outer">
+      <div class="car-track" id="carTrack"></div>
+    </div>
+    <button class="car-btn car-next" onclick="carMove(1)">&#8250;</button>
+  </div>
+
+  <div class="car-dots" id="carDots"></div>
+
+  <div class="designs-cta">
+    <p>এখানে অল্প কিছু নমুনা দেখানো হয়েছে। আপনার পছন্দের ডিজাইন বা সম্পূর্ণ নতুন ডিজাইনের জন্য আমাদের সাথে যোগাযোগ করুন।</p>
+    <a href="https://wa.me/8801518737032" target="_blank" class="cta-main" style="display:inline-flex;margin-top:16px;">আরও ডিজাইন দেখতে Message করুন</a>
+  </div>
+</section>
+
+<style>
+.designs{background:var(--offwhite);}
+.carousel-wrap{position:relative;display:flex;align-items:center;gap:0;}
+.car-track-outer{overflow:hidden;width:100%;border-radius:12px;}
+.car-track{
+  display:flex;transition:transform .45s cubic-bezier(.4,0,.2,1);
+  gap:16px;
+}
+.car-slide{
+  min-width:calc(33.333% - 11px);border-radius:12px;overflow:hidden;
+  flex-shrink:0;cursor:pointer;position:relative;
+  box-shadow:0 4px 20px rgba(0,0,0,.12);transition:transform .3s;
+}
+.car-slide:hover{transform:scale(1.03);}
+.car-slide img{width:100%;height:280px;object-fit:cover;display:block;}
+.car-btn{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:10;
+  background:var(--navy);color:#fff;border:none;
+  width:42px;height:42px;border-radius:50%;
+  font-size:24px;cursor:pointer;transition:all .2s;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 14px rgba(0,0,0,.25);flex-shrink:0;
+}
+.car-prev{left:-20px;}
+.car-next{right:-20px;}
+.car-btn:hover{background:var(--blue);transform:translateY(-50%) scale(1.1);}
+.car-dots{display:flex;justify-content:center;gap:8px;margin-top:20px;}
+.car-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:rgba(10,31,92,.2);cursor:pointer;transition:all .25s;border:none;
+}
+.car-dot.active{background:var(--navy);width:24px;border-radius:4px;}
+.designs-cta{text-align:center;margin-top:36px;padding:28px 20px;background:#fff;border-radius:14px;border:1px solid #e2e8f0;}
+.designs-cta p{color:var(--muted);font-size:15px;line-height:1.7;}
+@media(max-width:768px){
+  .car-slide{min-width:calc(50% - 8px);}
+  .car-slide img{height:200px;}
+  .car-prev{left:-14px;}
+  .car-next{right:-14px;}
+}
+@media(max-width:480px){
+  .car-slide{min-width:calc(100% - 0px);}
+}
+</style>
+
+<script>
+const designImages =  
+  "demo11.jpg",
+  "demo2.jpg",
+  "demo14.jpg",
+  "demo12.jpg",
+  "demo3.jpg",
+  "demo5.jpg",
+  "demo6.jpg",
+  "demo7.jpg",
+  "demo1.jpg",
+  "demo4.jpg",
+  "demo8.jpg",
+  "demo9.jpg",
+  "demo10.jpg",
+  "demo13.jpg",
+  "demo15.jpg";
+
+
+let carIndex = 0;
+let carAuto;
+const perView = () => window.innerWidth <= 480 ? 1 : window.innerWidth <= 768 ? 2 : 3;
+
+function carBuild() {
+  const track = document.getElementById('carTrack');
+  const dots = document.getElementById('carDots');
+  if (!track) return;
+  track.innerHTML = '';
+  dots.innerHTML = '';
+  
+  designImages.forEach((src, i) => {
+    const slide = document.createElement('div');
+    slide.className = 'car-slide';
+    slide.innerHTML = `<img src="${src}" alt="Jersey Design ${i+1}" loading="lazy">`;
+    track.appendChild(slide);
+  });
+  
+  const totalDots = designImages.length - perView() + 1;
+  for (let i = 0; i < totalDots; i++) {
+    const dot = document.createElement('button');
+    dot.className = 'car-dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => carGoTo(i);
+    dots.appendChild(dot);
+  }
+  carGoTo(0);
+}
+
+function carGoTo(idx) {
+  const track = document.getElementById('carTrack');
+  const slides = track.querySelectorAll('.car-slide');
+  const max = slides.length - perView();
+  carIndex = Math.max(0, Math.min(idx, max));
+  
+  const slideW = slides[0].offsetWidth + 16;
+  track.style.transform = `translateX(-${carIndex * slideW}px)`;
+  
+  document.querySelectorAll('.car-dot').forEach((d, i) => {
+    d.classList.toggle('active', i === carIndex);
+  });
+}
+
+function carMove(dir) {
+  clearInterval(carAuto);
+  carGoTo(carIndex + dir);
+  startAuto();
+}
+
+function startAuto() {
+  clearInterval(carAuto);
+  carAuto = setInterval(() => {
+    const max = designImages.length - perView();
+    carGoTo(carIndex >= max ? 0 : carIndex + 1);
+  }, 3000);
+}
+
+window.addEventListener('load', () => { carBuild(); startAuto(); });
+window.addEventListener('resize', () => carBuild());
+</script>
+
+<!-- WHY -->
+<section class="why" id="why">
+  <div class="sec-head">
+    <span class="sec-label">কেন Jersey HuB</span>
+    <h2 class="sec-title">আরাম, গুনগতমান ও নিজস্বতা —<br><span class="hl">তিনটি একসাথে পাওয়াই Jersey HuB এর পার্থক্য।</span></h2>
+    <p class="sec-sub">প্রতিটি জার্সি তৈরি হয় আপনার চাহিদা ও আরামের কথা মাথায় রেখে।</p>
+  </div>
+  <div class="feats">
+    <div class="feat"><div class="feat-icon">🎨</div><h3>সম্পূর্ণ কাস্টম ডিজাইন</h3><p>নাম, নম্বর ও লোগো — সম্পূর্ণ বিনামূল্যে। আপনার পছন্দমতো যেকোনো রঙ ও ডিজাইন অনুযায়ী।</p></div>
+    <div class="feat"><div class="feat-icon">🖨️</div><h3>Premium Sublimation Print</h3><p>ওয়াশেও রঙ বিবর্ণ হয় না। দীর্ঘস্থায়ী, উজ্জ্বল প্রিন্ট — professional মানের।</p></div>
+    <div class="feat"><div class="feat-icon">✂️</div><h3>Garments Quality সেলাই</h3><p>5 Ply High Tension Cuff-Collar — আকার ধরে রাখে, টেকসই ও পরতে আরামদায়ক।</p></div>
+    <div class="feat"><div class="feat-icon">📏</div><h3>সব সাইজে তৈরি</h3><p>XS থেকে 4XL এবং বাচ্চাদের সাইজও available — সবার জন্য perfect fit।</p></div>
+    <div class="feat"><div class="feat-icon">🚚</div><h3>দ্রুত ডেলিভারি</h3><p>Print file confirm এর পরদিন থেকে মাত্র ৩–৫ কর্মদিবসে ডেলিভারি।</p></div>
+    <div class="feat"><div class="feat-icon">📦</div><h3>মাত্র ১০ পিস থেকে</h3><p>ছোট ক্লাব বা বড় টিম — সর্বনিম্ন ১০ পিস অর্ডারেই সম্পূর্ণ সেবা পাবেন।</p></div>
+  </div>
+</section>
+
+<!-- FABRICS -->
+<section class="fabrics" id="fabrics">
+  <div class="sec-head">
+    <span class="sec-label">আমাদের কাপড়</span>
+    <h2 class="sec-title">Premium <span class="hl">Fabric Collection</span></h2>
+    <p class="sec-sub">৩টি মানের স্তরে — আপনার বাজেট ও পছন্দ অনুযায়ী সেরা fabric বেছে নিন।</p>
+  </div>
+
+  <!-- Tier 1 -->
+  <div class="fab-group">
+    <span class="fab-tier-label tier-p">Tier 1 — Premium Quality</span>
+    <div class="fab-grid">
+      <div class="fab-card"><img class="fab-img" src="china pp-180.jpeg" alt="China PP-180"><div class="fab-name">China PP-180</div></div>
+     <div class="fab-card"><img class="fab-img" src="Lorex fabric.jpeg" alt="Lorex"><div class="fab-name">Lorex</div></div>
+      <div class="fab-card"><img class="fab-img" src="Suger mesh.jpeg" alt="Suger Mesh"><div class="fab-name">Suger Mesh</div></div>
+      <div class="fab-card"><img class="fab-img" src="china mesh.jpeg"China mesh"><div class="fab-name">China mesh</div></div>
+    </div>
+  </div>
+
+  <!-- Tier 2 -->
+  <div class="fab-group">
+    <span class="fab-tier-label tier-sp">Tier 2 — Super Premium Quality</span>
+    <div class="fab-grid">
+      <div class="fab-card"><img class="fab-img" src="Boxmeshfabric.jpeg" alt="Birdseye / Box Mesh"><div class="fab-name">Birdseye / Box Mesh</div></div>
+      <div class="fab-card"><img class="fab-img" src="honeycomb.jpeg" alt="Honeycomb"><div class="fab-name">Honeycomb</div></div>
+      <div class="fab-card"><img class="fab-img" src="thai mesh.jpeg" alt="Thai Mash"><div class="fab-name">Thai Mash</div></div>
+      
+    </div>
+  </div>
+
+  <!-- Tier 3 -->
+  <div class="fab-group">
+    <span class="fab-tier-label tier-up">Tier 3 — Ultra Super Premium · Jacquard Collection</span>
+    <div class="fab-grid">
+      <div class="fab-card"><img class="fab-img" src="leaf jaqquard.jpeg" alt="Leaf Jacquard"><div class="fab-name">Leaf Jacquard</div></div>
+      <div class="fab-card"><img class="fab-img" src="leaf jaquard2.jpg" alt="Leaf Jaquard"><div class="fab-name">Leaf Jaquard</div></div>
+      <div class="fab-card"><img class="fab-img" src="honeycomb jacquard.jpg" alt="Honeycomb Jacquard"><div class="fab-name">Honeycomb Jacquard</div></div>
+      <div class="fab-card"><img class="fab-img" src="Brush Jacquard.jpg" alt="Brush Jacquard"><div class="fab-name">Brush Jacquard</div></div>
+      <div class="fab-card"><img class="fab-img" src="TIGER Jacquard.jpg" alt="Tiger Jacquard"><div class="fab-name">TIGER Jacquard</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="sec-head">
+    <span class="sec-label">মূল্য তালিকা</span>
+    <h2 class="sec-title">Jersey HuB <span class="hl">Official Price List</span></h2>
+    <p class="sec-sub">প্রতি পিস হিসেবে। নাম, নম্বর ও লোগো ডিজাইন সম্পূর্ণ বিনামূল্যে।</p>
+  </div>
+  <div class="price-grid">
+
+    <div class="pc">
+      <div class="pc-tier">Tier 1 — Premium</div>
+      <h3>China PP Fabric</h3>
+      <p class="pc-fabrics">China PP</p>
+      <hr>
+      <div class="pr"><span class="type">গোলগলা হাফ হাতা</span><span class="amt">৳৩০০</span></div>
+      <div class="pr"><span class="type">গোলগলা ফুল হাতা</span><span class="amt">৳৩৩০</span></div>
+      <div class="pr"><span class="type">কলার হাফ হাতা</span><span class="amt">৳৩৩০</span></div>
+      <div class="pr"><span class="type">কলার ফুল হাতা</span><span class="amt">৳৩৫০</span></div>
+    </div>
+
+    <div class="pc">
+      <div class="pc-tier">Tier 1 — Premium</div>
+      <h3>Mesh · Chinigura</h3>
+      <p class="pc-fabrics">Mesh • Chinigura</p>
+      <hr>
+      <div class="pr"><span class="type">গোলগলা হাফ হাতা</span><span class="amt">৳৩১০</span></div>
+      <div class="pr"><span class="type">গোলগলা ফুল হাতা</span><span class="amt">৳৩৪০</span></div>
+      <div class="pr"><span class="type">কলার হাফ হাতা</span><span class="amt">৳৩৪০</span></div>
+      <div class="pr"><span class="type">কলার ফুল হাতা</span><span class="amt">৳৩৭০</span></div>
+    </div>
+
+    <div class="pc pop">
+      <div class="pc-tier">Tier 2 — Super Premium</div>
+      <h3>Box Mesh / Honeycomb / Eyelet</h3>
+      <p class="pc-fabrics">Box Mesh • Honeycomb • Eyelet</p>
+      <hr>
+      <div class="pr"><span class="type">গোলগলা হাফ হাতা</span><span class="amt">৳৩২০</span></div>
+      <div class="pr"><span class="type">গোলগলা ফুল হাতা</span><span class="amt">৳৩৫০</span></div>
+      <div class="pr"><span class="type">কলার হাফ হাতা</span><span class="amt">৳৩৫০</span></div>
+      <div class="pr"><span class="type">কলার ফুল হাতা</span><span class="amt">৳৩৭০</span></div>
+    </div>
+
+    <div class="pc">
+      <div class="pc-tier">Tier 2 — Super Premium</div>
+      <h3>Lurex Fabric</h3>
+      <p class="pc-fabrics">Lurex</p>
+      <hr>
+      <div class="pr"><span class="type">গোলগলা হাফ হাতা</span><span class="amt">৳৩৪০</span></div>
+      <div class="pr"><span class="type">গোলগলা ফুল হাতা</span><span class="amt">৳৩৭০</span></div>
+      <div class="pr"><span class="type">কলার হাফ হাতা</span><span class="amt">৳৩৬০</span></div>
+      <div class="pr"><span class="type">কলার ফুল হাতা</span><span class="amt">৳৩৯০</span></div>
+    </div>
+
+    <div class="pc">
+      <div class="pc-tier">Tier 3 — Ultra Premium</div>
+      <h3>Leaf Jacquard</h3>
+      <p class="pc-fabrics">Leaf Jacquard (Player Edition)</p>
+      <hr>
+      <div class="pr"><span class="type">গোলগলা হাফ হাতা</span><span class="amt">৳৪২০</span></div>
+      <div class="pr"><span class="type">গোলগলা ফুল হাতা</span><span class="amt">৳৪৫০</span></div>
+      <div class="pr"><span class="type">কলার হাফ হাতা</span><span class="amt">৳৪৪০</span></div>
+      <div class="pr"><span class="type">কলার ফুল হাতা</span><span class="amt">৳৪৭০</span></div>
+    </div>
+
+    <div class="pc">
+      <div class="pc-tier">Tier 3 — Ultra Premium</div>
+      <h3>Honey Comb Jacquard</h3>
+      <p class="pc-fabrics">Honey Comb Jacquard</p>
+      <hr>
+      <div class="pr"><span class="type">গোলগলা হাফ হাতা</span><span class="amt">৳৩৮০</span></div>
+      <div class="pr"><span class="type">গোলগলা ফুল হাতা</span><span class="amt">৳৪১০</span></div>
+      <div class="pr"><span class="type">কলার হাফ হাতা</span><span class="amt">৳৪১০</span></div>
+      <div class="pr"><span class="type">কলার ফুল হাতা</span><span class="amt">৳৪৩০</span></div>
+    </div>
+
+    <div class="pc">
+      <div class="pc-tier">Tier 3 — Ultra Premium</div>
+      <h3>Brush Jacquard</h3>
+      <p class="pc-fabrics">Brush Jacquard</p>
+      <hr>
+      <div class="pr"><span class="type">গোলগলা হাফ হাতা</span><span class="amt">৳৪৩০</span></div>
+      <div class="pr"><span class="type">গোলগলা ফুল হাতা</span><span class="amt">৳৪৬০</span></div>
+      <div class="pr"><span class="type">কলার হাফ হাতা</span><span class="amt">৳৪৬০</span></div>
+      <div class="pr"><span class="type">কলার ফুল হাতা</span><span class="amt">৳৫০০</span></div>
+    </div>
+
+    <div class="pc">
+      <div class="pc-tier">Tier 3 — Ultra Premium</div>
+      <h3>Tiger Jacquard</h3>
+      <p class="pc-fabrics">Tiger Jacquard</p>
+      <hr>
+      <div class="pr"><span class="type">গোলগলা হাফ হাতা</span><span class="amt">৳৪৩০</span></div>
+      <div class="pr"><span class="type">গোলগলা ফুল হাতা</span><span class="amt">৳৪৬০</span></div>
+      <div class="pr"><span class="type">কলার হাফ হাতা</span><span class="amt">৳৪৬০</span></div>
+      <div class="pr"><span class="type">কলার ফুল হাতা</span><span class="amt">৳৫০০</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- INFO STRIP -->
+<div class="infostrip">
+  <div class="info-grid">
+    <div class="info-item"><div class="ico">📦</div><h4>সর্বনিম্ন ১০ পিস</h4><p>ছোট অর্ডারেও পূর্ণ সেবা</p></div>
+    <div class="info-item"><div class="ico">🎨</div><h4>Custom Sublimation</h4><p>সম্পূর্ণ কাস্টম প্রিন্টিং</p></div>
+    <div class="info-item"><div class="ico">🚚</div><h4>৩–৫ কর্মদিবস</h4><p>দ্রুত ও নিরাপদ ডেলিভারি</p></div>
+    <div class="info-item"><div class="ico">✅</div><h4>নাম ও নম্বর ফ্রি</h4><p>লোগোও বিনামূল্যে</p></div>
+    <div class="info-item"><div class="ico">✂️</div><h4>Garments Stitching</h4><p>5 Ply High Tension Cuff</p></div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-wrap">
+    <div class="contact-left">
+      <span class="sec-label">যোগাযোগ করুন</span>
+      <h2>অর্ডার করতে<br>এখনই যোগাযোগ করুন</h2>
+      <p>WhatsApp বা Facebook — যেকোনো মাধ্যমে আমাদের সাথে যোগাযোগ করুন। Design confirm এর পর মাত্র ৩–৫ কর্মদিবসে আপনার জার্সি পৌঁছে যাবে।</p>
+      <a href="https://wa.me/8801518737032" target="_blank" class="cta-main">📲 এখনই অর্ডার করুন</a>
+    </div>
+    <div class="c-cards">
+      <a href="https://wa.me/8801518737032" target="_blank" class="c-card">
+        <span class="ci">💬</span>
+        <div class="ct"><h4>WhatsApp</h4><p>01518-737032 — সরাসরি মেসেজ করুন</p></div>
+        <span class="arr">→</span>
+      </a>
+      <a href="https://www.facebook.com/JerseyHuB511" target="_blank" class="c-card">
+        <span class="ci">📘</span>
+        <div class="ct"><h4>Facebook Page</h4><p>Jersey HuB — আমাদের Follow করুন</p></div>
+        <span class="arr">→</span>
+      </a>
+      <div class="c-card" style="cursor:default;">
+        <span class="ci">🕐</span>
+        <div class="ct"><h4>ডেলিভারি সময়</h4><p>Print file confirm এর পর ৩–৫ কর্মদিবস</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIZE CHART -->
+<section class="sizechart" id="sizechart">
+  <div class="sec-head">
+    <span class="sec-label">সাইজ গাইড</span>
+    <h2 class="sec-title">Size <span class="hl">Chart</span></h2>
+    <p class="sec-sub">অর্ডার করার আগে সাইজ মিলিয়ে নিন — সঠিক fit এর জন্য।</p>
+  </div>
+  <div class="size-wrap">
+    <div class="size-block">
+      <h3>👨 Men's Size Chart</h3>
+      <table>
+        <thead><tr><th>Size</th><th>Length</th><th>Chest</th></tr></thead>
+        <tbody>
+          <tr><td>XS</td><td>25"</td><td>34"</td></tr>
+          <tr><td>S</td><td>26"</td><td>36"</td></tr>
+          <tr><td>M</td><td>27"</td><td>38"</td></tr>
+          <tr><td>L</td><td>28"</td><td>40"</td></tr>
+          <tr><td>XL</td><td>29"</td><td>42"</td></tr>
+          <tr><td>XXL</td><td>30"</td><td>44"</td></tr>
+          <tr><td>XXXL</td><td>31"</td><td>46"</td></tr>
+        </tbody>
+      </table>
+      <p class="size-note">* সাইজ নিয়ে সন্দেহ থাকলে WhatsApp এ জানান।</p>
+    </div>
+    <div class="size-block">
+      <h3>👦 Kids Size Chart</h3>
+      <table>
+        <thead><tr><th>Age</th><th>Length</th><th>Chest</th></tr></thead>
+        <tbody>
+          <tr><td>3–4 Years</td><td>18"</td><td>26"</td></tr>
+          <tr><td>5–6 Years</td><td>19"</td><td>28"</td></tr>
+          <tr><td>7–8 Years</td><td>20"</td><td>30"</td></tr>
+          <tr><td>9–10 Years</td><td>22"</td><td>32"</td></tr>
+          <tr><td>11–12 Years</td><td>24"</td><td>34"</td></tr>
+        </tbody>
+      </table>
+      <p class="size-note">* Baby ও Plus Size এর জন্য আলাদাভাবে যোগাযোগ করুন।</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="Jersey HuB logo.jpg" alt="Jersey HuB">
+  <p>© 2026 Jersey HuB. সকল অধিকার সংরক্ষিত।<br>Customise Jersey • Premium Quality • Bangladesh</p>
+  <div class="foot-links">
+    <a href="https://wa.me/8801518737032" target="_blank">WhatsApp</a>
+    <a href="https://www.facebook.com/JerseyHuB511" target="_blank">Facebook</a>
+    <a href="#sizechart">Size Chart</a>
+  </div>
+</footer>
+
+</body>
+</html>
